@@ -4,6 +4,7 @@ set(PROJECT_NAME DildoWing)
 
 project(${PROJECT_NAME})
 
-add_subdirectory(dep)
+add_executable(${PROJECT_NAME} src/main.cpp)
 
+add_subdirectory(dep)
 target_link_libraries(${PROJECT_NAME} glfw)
