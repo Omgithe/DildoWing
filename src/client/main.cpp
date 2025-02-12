@@ -34,14 +34,14 @@ int main(void)
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << "\nOpenGL: " << glGetString(GL_VERSION) << std::endl;
     std::cout << "c++ version " << __cplusplus << std::endl;
     
-    glClearColor(1, 1, 0, 1);
+    glfwSwapInterval(1);
 
-    while (!glfwWindowShouldClose(window))
+    glClearColor(0, 1, 0, 1);
+    while(!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT);
-
-        glfwSwapBuffers(window);
         
+        glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
