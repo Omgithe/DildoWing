@@ -3,6 +3,8 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <asio.hpp>
+
 #include <iostream>
 
 class GameInstance
@@ -11,12 +13,10 @@ public:
 	GameInstance();
 	~GameInstance();
 	void Run();
-	void test()
-	{
-	}
-
 private:
-	GLFWwindow *window = nullptr;
+	GLFWwindow* window = nullptr;
+
+	asio::io_context io_context;
 };
 
 #endif
