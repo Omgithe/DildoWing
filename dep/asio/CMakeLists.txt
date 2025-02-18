@@ -5,7 +5,7 @@ project(asio)
 add_library(asio STATIC include/asio.hpp src/asio.cpp) # src/asio_ssl.cpp)
 
 target_compile_definitions(asio PRIVATE ASIO_STANDALONE)
-target_compile_definitions(asio PRIVATE -DASIO_HAS_THREADS)
+target_compile_definitions(asio PRIVATE ASIO_HAS_THREADS)
 target_compile_definitions(asio PRIVATE ASIO_SEPARATE_COMPILATION)
 target_compile_definitions(asio PRIVATE ASIO_HAS_STD_ADDRESSOF)
 target_compile_definitions(asio PRIVATE ASIO_HAS_STD_ARRAY)
